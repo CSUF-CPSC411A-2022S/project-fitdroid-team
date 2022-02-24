@@ -9,3 +9,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 }
+
+class WeightGoal(private val weight: Float) {
+    fun displayWeight() {
+        println(weight)
+    }
+}
