@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/homepage">
-
+   //trietchanges
     <fragment
         android:id="@+id/homepage"
         android:name="com.example.fitdroid.Homepage"
