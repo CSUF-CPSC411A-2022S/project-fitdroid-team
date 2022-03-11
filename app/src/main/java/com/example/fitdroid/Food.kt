@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import com.example.fitdroid.databinding.GoalsBinding
+import com.example.fitdroid.databinding.FoodBinding
 
 
 class Food : Fragment() {
@@ -14,7 +14,7 @@ class Food : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = GoalsBinding.inflate(layoutInflater)
+        val binding = FoodBinding.inflate(layoutInflater)
 
         binding.homeButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_food_to_homepage)
