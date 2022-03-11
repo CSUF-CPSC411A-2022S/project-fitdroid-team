@@ -21,6 +21,9 @@ class Homepage : Fragment() {
             view.findNavController().navigate(R.id.action_homepage_to_goals)
         }
 
+        binding.calButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_homepage_to_food)
+        }
         return binding.root
     }
 }

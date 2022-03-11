@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/homepage">
-   //trietchanges
+
     <fragment
         android:id="@+id/homepage"
         android:name="com.example.fitdroid.Homepage"
@@ -13,6 +13,11 @@
         <action
             android:id="@+id/action_homepage_to_goals"
             app:destination="@id/goals" />
+
+        <action
+            android:id="@+id/action_homepage_to_food"
+            app:destination="@id/food" />
+
     </fragment>
     <fragment
         android:id="@+id/goals"
@@ -21,6 +26,16 @@
         tools:layout="@layout/goals" >
         <action
             android:id="@+id/action_goals_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/food"
+        android:name="com.example.fitdroid.Food"
+        android:label="food"
+        tools:layout="@layout/food" >
+        <action
+            android:id="@+id/action_food_to_homepage"
             app:destination="@id/homepage" />
     </fragment>
 </navigation>
