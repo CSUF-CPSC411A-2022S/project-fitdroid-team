@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_homepage_to_workout"
             app:destination="@id/workout" />
+        <action
+            android:id="@+id/action_homepage_to_userModel"
+            app:destination="@id/userModel" />
 
     </fragment>
     <fragment
@@ -48,6 +51,15 @@
         tools:layout="@layout/workout" >
         <action
             android:id="@+id/action_workout_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/userModel"
+        android:name="com.example.fitdroid.UserModel"
+        android:label="users"
+        tools:layout="@layout/users" >
+        <action
+            android:id="@+id/action_userModel_to_homepage"
             app:destination="@id/homepage" />
     </fragment>
 </navigation>

@@ -27,6 +27,10 @@ class Homepage : Fragment() {
         binding.workoutButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_homepage_to_workout)
         }
+
+        binding.userButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_homepage_to_userModel)
+        }
         return binding.root
     }
 }
