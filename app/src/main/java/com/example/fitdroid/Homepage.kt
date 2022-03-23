@@ -20,9 +20,12 @@ class Homepage : Fragment() {
         binding.goalsButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_homepage_to_goals)
         }
-
         binding.calButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_homepage_to_food)
+        }
+
+        binding.workoutButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_homepage_to_workout)
         }
         return binding.root
     }
