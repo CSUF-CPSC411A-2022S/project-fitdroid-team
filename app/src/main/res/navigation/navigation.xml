@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_homepage_to_food"
             app:destination="@id/food" />
+        <action
+            android:id="@+id/action_homepage_to_workout"
+            app:destination="@id/workout" />
 
     </fragment>
     <fragment
@@ -36,6 +39,15 @@
         tools:layout="@layout/food" >
         <action
             android:id="@+id/action_food_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/workout"
+        android:name="com.example.fitdroid.Workout"
+        android:label="workout"
+        tools:layout="@layout/workout" >
+        <action
+            android:id="@+id/action_workout_to_homepage"
             app:destination="@id/homepage" />
     </fragment>
 </navigation>
