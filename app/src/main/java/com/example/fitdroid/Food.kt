@@ -24,33 +24,32 @@ class Food : Fragment() {
         return binding.root
     }
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        var binding = FoodBinding.inflate(layoutInflater)
-//        // root is a property holding the view of the inflated XML and is set as the contentView
-//        activity?.setContentView(binding.root)
-//
-//
-//        var foodListAdapter = FoodListAdapter(getActivity()?.this)
-//        binding.recyclerView.adapter = foodListAdapter
-//
-//
-//        binding.addFood.setOnClickListener {
-//
-//            val toast = Toast.makeText(
-//                this,
-//                "Adding ${binding.foodName.text} @ ${binding.foodAddress.text}",
-//                Toast.LENGTH_SHORT
-//            )
-//            toast.show()
-//
-//            // We can access the data through the dataset property inside foodListAdapter.the d
-//            foodListAdapter.dataset.add("${binding.foodName.text} @ ${binding.foodAddress.text}")
-//
-//            // Inform the adapter that we made changes so the visual representation can be updated.
-//            foodListAdapter.notifyDataSetChanged()
-//
-//        }
-//    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+// TODO: ADD UNIQUE CODE TO FUNCTION ABOVE
+        var binding = FoodBinding.inflate(layoutInflater)
+        // root is a property holding the view of the inflated XML and is set as the contentView
+
+
+        var foodListAdapter = FoodListAdapter(requireContext())
+        binding.recyclerView.adapter = foodListAdapter
+
+
+        binding.addFood.setOnClickListener {
+
+            val toast = Toast.makeText(
+                requireContext(),
+                "Adding ${binding.foodName.text} @ ${binding.foodAddress.text}",
+                Toast.LENGTH_SHORT
+            )
+            toast.show()
+
+            // We can access the data through the dataset property inside foodListAdapter.the d
+            foodListAdapter.dataset.add("${binding.foodName.text} @ ${binding.foodAddress.text}")
+
+            // Inform the adapter that we made changes so the visual representation can be updated.
+            foodListAdapter.notifyDataSetChanged()
+
+        }
+    }
 }
