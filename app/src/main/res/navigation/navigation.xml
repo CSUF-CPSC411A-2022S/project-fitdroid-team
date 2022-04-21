@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/userModel"
-        android:name="com.example.fitdroid.UserModel"
+        android:name="com.example.fitdroid.UserData.UserFragment"
         android:label="users"
         tools:layout="@layout/users" >
         <action
