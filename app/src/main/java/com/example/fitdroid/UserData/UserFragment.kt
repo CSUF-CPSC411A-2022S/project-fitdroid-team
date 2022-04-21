@@ -12,7 +12,7 @@ import com.example.fitdroid.databinding.UsersBinding
 
 
 class UserFragment : Fragment() {
-    private val viewModel: UserModel by viewModels()
+    private val viewViewModel: UserViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
