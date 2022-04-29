@@ -20,9 +20,24 @@ data class User(
     var gender: String = "",
 
     @ColumnInfo()
-    var age: String = "",
+    var age: Int = 0,
 
     @ColumnInfo()
-    var zipCode: String = "",
+    var address: String = "",
 
 )
+@Entity(tableName = "scale_table")
+data class User_Scale(
+    @PrimaryKey(autoGenerate = true)
+    var ScaleId: Long = 0L,
+
+    @ColumnInfo()
+    var tall: Float = 0F,
+
+    @ColumnInfo()
+    var weight: Float = 0F,
+
+    @ColumnInfo()
+    var goal: Float = 0F,
+
+    )

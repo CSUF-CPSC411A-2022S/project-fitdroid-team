@@ -24,3 +24,21 @@ interface UserDao{
     @Query("DELETE from user_table")
     suspend fun clear()
 }
+
+@Dao
+interface ScaleDao{
+    @Insert
+    suspend fun insert(scale: User_Scale)
+
+    @Update
+    suspend fun update(scale: User_Scale)
+
+    @Query("SELECT * from scale_table WHERE ScaleId = :key")
+    fun get(key: Long): LiveData<User_Scale>
+
+    @Query("SELECT * from scale_table ORDER BY ScaleId DESC")
+    fun getAllScale(): LiveData<List<User_Scale>>
+
+    @Query("DELETE from scale_table")
+    suspend fun clear()
+}

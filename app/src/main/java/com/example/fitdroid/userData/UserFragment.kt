@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -34,11 +35,12 @@ class UserFragment : Fragment() {
         binding.userViewModel = userViewModel
         binding.lifecycleOwner = this
 
-
         binding.homeButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_userModel_to_homepage)
         }
-        //binding.nextButton.setOnClickListener{onNextPage()}
+        binding.nextbutton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_userModel_to_userScaleFragment)
+        }
         return binding.root
     }
 }

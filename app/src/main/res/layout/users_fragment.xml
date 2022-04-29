@@ -51,13 +51,13 @@
                 android:id="@+id/female"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Female" />
+                android:text="@={UserViewModel.gender}" />
 
             <RadioButton
                 android:id="@+id/male"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Male" />
+                android:text="@={UserViewModel.gender}" />
         </RadioGroup>
 
         <TextView
@@ -103,12 +103,12 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/zipCode"
+            android:id="@+id/address"
             android:layout_width="280dp"
             android:layout_height="58dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@={UserViewModel.zipCode}"
+            android:text="@={UserViewModel.address}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.466"

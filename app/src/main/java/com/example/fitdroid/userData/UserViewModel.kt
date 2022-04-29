@@ -20,7 +20,7 @@ class UserViewModel(
     var email = MutableLiveData("")
     var gender = MutableLiveData("")
     var age = MutableLiveData("")
-    var zipCode = MutableLiveData("")
+    var address = MutableLiveData("")
 
     val UserList = database.getAllUser()
 
@@ -28,7 +28,7 @@ class UserViewModel(
             users ->
         var result = ""
         for(user in users){
-            result += "${user.name} @ ${user.age}\n"
+            result += "${user.name} @ ${user.gender}\n"
         }
         result
     }
@@ -38,12 +38,13 @@ class UserViewModel(
             user.name = name.value.toString()
             user.email = email.value.toString()
             user.gender = gender.value.toString()
-            user.age = age.value.toString()
-            user.zipCode = zipCode.value.toString()
+            user.age = Integer.parseInt(age.value.toString())
+            user.address = address.value.toString()
 
             database.insert(user)
         }
     }
+
     fun clear() {
         // Launch coroutines in the viewModelScope so that the coroutines are automatically
         // canceled when the ViewModel is destroyed.
