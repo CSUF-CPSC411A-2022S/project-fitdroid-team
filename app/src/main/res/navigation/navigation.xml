@@ -55,9 +55,9 @@
     </fragment>
     <fragment
         android:id="@+id/userModel"
-        android:name="com.example.fitdroid.UserData.UserFragment"
+        android:name="com.example.fitdroid.userData.UserFragment"
         android:label="users"
-        tools:layout="@layout/users" >
+        tools:layout="@layout/users_fragment" >
         <action
             android:id="@+id/action_userModel_to_homepage"
             app:destination="@id/homepage" />
