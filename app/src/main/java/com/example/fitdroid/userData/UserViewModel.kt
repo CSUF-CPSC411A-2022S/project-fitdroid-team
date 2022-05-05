@@ -1,7 +1,6 @@
-package com.example.fitdroid.UserData
+package com.example.fitdroid.userData
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations

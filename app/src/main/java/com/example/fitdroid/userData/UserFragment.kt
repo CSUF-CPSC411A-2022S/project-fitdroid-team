@@ -1,4 +1,4 @@
-package com.example.fitdroid.UserData
+package com.example.fitdroid.userData
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

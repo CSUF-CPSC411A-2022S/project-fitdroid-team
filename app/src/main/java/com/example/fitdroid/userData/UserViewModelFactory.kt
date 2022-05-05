@@ -1,4 +1,4 @@
-package com.example.fitdroid.UserData
+package com.example.fitdroid.userData
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
