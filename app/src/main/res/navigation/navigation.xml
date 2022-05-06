@@ -68,5 +68,6 @@
     <fragment
         android:id="@+id/userScaleFragment"
         android:name="com.example.fitdroid.user_scale_data.UserScaleFragment"
-        android:label="UserScaleFragment" />
+        android:label="user_scale_fragment"
+        tools:layout="@layout/user_scale_fragment"/>
 </navigation>
