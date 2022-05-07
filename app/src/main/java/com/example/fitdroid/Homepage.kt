@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.fitdroid.databinding.HomepageBinding
 
+
 class Homepage : Fragment() {
     private var countDownTimer: CountDownTimer? = null
     private var timerDuration: Long = 60000

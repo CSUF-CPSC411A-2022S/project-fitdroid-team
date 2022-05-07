@@ -1,13 +1,10 @@
 package com.example.fitdroid.userData
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.viewModelScope
 import com.example.fitdroid.database.User
 import com.example.fitdroid.database.UserDao
 import kotlinx.coroutines.launch
+import androidx.lifecycle.*
 
 class UserViewModel(
     val database: UserDao,

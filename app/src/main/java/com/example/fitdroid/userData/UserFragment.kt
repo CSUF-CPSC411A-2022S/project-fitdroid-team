@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.fitdroid.R
 import com.example.fitdroid.database.UserDatabase
-import com.example.fitdroid.databinding.UsersFragmentBinding
+import com.example.fitdroid.databinding.UserFragmentBinding
 
 
 class UserFragment : Fragment() {
@@ -19,8 +19,8 @@ class UserFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: UsersFragmentBinding =
-            DataBindingUtil.inflate(inflater, R.layout.users_fragment, container,false)
+        val binding : UserFragmentBinding =
+            DataBindingUtil.inflate(inflater, R.layout.user_fragment, container, false)
 
         val application = requireNotNull(this.activity).application
 
@@ -30,15 +30,12 @@ class UserFragment : Fragment() {
 
         val userViewModel =
             ViewModelProvider(this, viewModelFactory).get(UserViewModel::class.java)
-
         binding.userViewModel = userViewModel
+
         binding.lifecycleOwner = this
 
         binding.homeButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_userModel_to_homepage)
-        }
-        binding.nextbutton.setOnClickListener{ view: View ->
-            view.findNavController().navigate(R.id.action_userModel_to_userScaleFragment)
         }
         return binding.root
     }
