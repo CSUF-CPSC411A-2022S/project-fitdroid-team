@@ -109,7 +109,7 @@
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <Button
-                    android:id="@+id/nextbutton"
+                    android:id="@+id/savebutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -120,28 +120,17 @@
                     android:textSize="18sp"
                     android:onClick="@{() -> userViewModel.insert()}"/>
                 <Button
-                    android:id="@+id/homeButton"
+                    android:id="@+id/nextButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="HOME"
+                    android:text="NEXT"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:textColor="@android:color/white"
                     android:textSize="18sp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-        <TextView
-            android:id="@+id/UserList"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="40dp"
-            android:text="@{userViewModel.userString}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
+
     </LinearLayout>
 </layout>

@@ -6,8 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.viewModelScope
 import com.example.fitdroid.database.ScaleDao
-import com.example.fitdroid.database.User
-import com.example.fitdroid.database.UserDao
 import com.example.fitdroid.database.User_Scale
 import kotlinx.coroutines.launch
 

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6">
 
     <data>
         <variable
-            name="UserScaleViewModel"
+            name="userScaleViewModel"
             type="com.example.fitdroid.user_scale_data.UserScaleViewModel" />
     </data>
     <LinearLayout
@@ -51,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Height"
-                android:inputType="textEmailAddress"
+                android:text="@={userScaleViewModel.tall}"
+                android:inputType="text|numberDecimal"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Weight"
-                android:inputType="textPassword"
+                android:text="@={userScaleViewModel.weight}"
+                android:inputType="text|numberDecimal"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -82,15 +85,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Goal Weight"
-                android:inputType="textPassword"
+                android:text="@={userScaleViewModel.goal}"
+                android:inputType="text|numberDecimal"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/saveButtton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="NEXT"
+            android:text="SAVE"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:onClick="@{() -> userScaleViewModel.insert()}"/>
+        <Button
+            android:id="@+id/SumbitButtton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SUMBIT"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:textColor="@android:color/white"
