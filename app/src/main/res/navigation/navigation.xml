@@ -16,7 +16,7 @@
 
         <action
             android:id="@+id/action_homepage_to_food"
-            app:destination="@id/food" />
+            app:destination="@id/calorieListFragment" />
         <action
             android:id="@+id/action_homepage_to_workout"
             app:destination="@id/workout" />
@@ -36,13 +36,15 @@
     </fragment>
 
     <fragment
-        android:id="@+id/food"
-        android:name="com.example.fitdroid.Food"
-        android:label="food"
-        tools:layout="@layout/food" >
+        android:id="@+id/calorieListFragment"
+        android:name="com.example.fitdroid.calorielist.CalorieListFragment"
+        android:label="food">
         <action
             android:id="@+id/action_food_to_homepage"
             app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_calorieListFragment_to_calorieItemFragment"
+            app:destination="@id/calorieItemFragment" />
     </fragment>
     <fragment
         android:id="@+id/workout"
@@ -69,4 +71,12 @@
         android:id="@+id/userScaleFragment"
         android:name="com.example.fitdroid.user_scale_data.UserScaleFragment"
         android:label="UserScaleFragment" />
+    <fragment
+        android:id="@+id/calorieItemFragment"
+        android:name="com.example.fitdroid.userData.CalorieItemFragment"
+        android:label="CalorieItemFragment" >
+        <argument
+            android:name="calorieId"
+            app:argType="long" />
+    </fragment>
 </navigation>
