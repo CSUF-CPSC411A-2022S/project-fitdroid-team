@@ -66,6 +66,15 @@
         <action
             android:id="@+id/action_workout_to_underweight"
             app:destination="@id/underweight" />
+        <action
+            android:id="@+id/action_workout_to_normalschedule"
+            app:destination="@id/normalschedule" />
+        <action
+            android:id="@+id/action_workout_to_overschedule"
+            app:destination="@id/overschedule" />
+        <action
+            android:id="@+id/action_workout_to_underschedule"
+            app:destination="@id/underschedule" />
     </fragment>
     <fragment
         android:id="@+id/userModel"
@@ -118,6 +127,9 @@
         <argument
             android:name="bmi"
             app:argType="string" />
+        <action
+            android:id="@+id/action_normalweight_to_normalschedule"
+            app:destination="@id/normalschedule" />
     </fragment>
     <fragment
         android:id="@+id/overweight"
@@ -132,6 +144,9 @@
         <argument
             android:name="bmi"
             app:argType="string" />
+        <action
+            android:id="@+id/action_overweight_to_overschedule"
+            app:destination="@id/overschedule" />
     </fragment>
     <fragment
         android:id="@+id/underweight"
@@ -147,5 +162,35 @@
         <argument
             android:name="bmi"
             app:argType="string" />
+        <action
+            android:id="@+id/action_underweight_to_underschedule"
+            app:destination="@id/underschedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalschedule"
+        android:name="com.example.fitdroid.schedule.Normalschedule"
+        android:label="normalschedule"
+        tools:layout="@layout/normalschedule" >
+        <action
+            android:id="@+id/action_normalschedule_to_workout"
+            app:destination="@id/workout" />
+    </fragment>
+    <fragment
+        android:id="@+id/overschedule"
+        android:name="com.example.fitdroid.schedule.Overschedule"
+        android:label="overschedule"
+        tools:layout="@layout/overschedule" >
+        <action
+            android:id="@+id/action_overschedule_to_workout"
+            app:destination="@id/workout" />
+    </fragment>
+    <fragment
+        android:id="@+id/underschedule"
+        android:name="com.example.fitdroid.schedule.Underschedule"
+        android:label="underschedule"
+        tools:layout="@layout/underschedule" >
+        <action
+            android:id="@+id/action_underschedule_to_workout"
+            app:destination="@id/workout" />
     </fragment>
 </navigation>

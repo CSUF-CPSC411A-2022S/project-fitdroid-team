@@ -20,9 +20,11 @@ class Normalweight : Fragment() {
         val binding = NormalweightBinding.inflate(layoutInflater)
         val args = NormalweightArgs.fromBundle(requireArguments())
         binding.BmiText.text ="Your BMI is ${args.bmi}. You are in good shape.\n" +
-                "This is the recommend schedule for you"
+                "Please click the button below for the recommend weekly workout schedule: "
 
-
+        binding.Schedule.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_normalweight_to_normalschedule)
+        }
         binding.Home.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_normalweight_to_homepage)
         }
