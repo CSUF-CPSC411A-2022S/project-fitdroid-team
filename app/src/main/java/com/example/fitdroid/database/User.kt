@@ -17,9 +17,6 @@ data class User(
     var email: String = "",
 
     @ColumnInfo()
-    var gender: String = "",
-
-    @ColumnInfo()
     var age: Int = 0,
 
     @ColumnInfo()

@@ -59,7 +59,7 @@
         android:id="@+id/userModel"
         android:name="com.example.fitdroid.userData.UserFragment"
         android:label="users"
-        tools:layout="@layout/users_fragment" >
+        tools:layout="@layout/user_fragment" >
         <action
             android:id="@+id/action_userModel_to_homepage"
             app:destination="@id/homepage" />
@@ -70,7 +70,12 @@
     <fragment
         android:id="@+id/userScaleFragment"
         android:name="com.example.fitdroid.user_scale_data.UserScaleFragment"
-        android:label="UserScaleFragment" />
+        android:label="UserScaleFragment"
+        tools:layout="@layout/user_scale_fragment">
+        <action
+            android:id="@+id/action_userScaleFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/calorieItemFragment"
         android:name="com.example.fitdroid.userData.CalorieItemFragment"
@@ -78,5 +83,14 @@
         <argument
             android:name="calorieId"
             app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.fitdroid.userProfile.UserProfileFragment"
+        android:label="UserProfileFragment"
+        tools:layout="@layout/user_profile_fragment">
+        <action
+            android:id="@+id/action_userProfileFragment_to_homepage"
+            app:destination="@id/homepage" />
     </fragment>
 </navigation>

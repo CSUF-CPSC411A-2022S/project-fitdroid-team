@@ -35,9 +35,9 @@ class UserScaleFragment : Fragment() {
         binding.lifecycleOwner = this
 
 
-//        binding.homeButton.setOnClickListener{ view: View ->
-//            view.findNavController().navigate(R.id.action_userModel_to_homepage)
-//        }
+        binding.SumbitButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_userScaleFragment_to_userProfileFragment)
+        }
         return binding.root
     }
 }
