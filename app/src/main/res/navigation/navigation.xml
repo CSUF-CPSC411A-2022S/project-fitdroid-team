@@ -16,7 +16,7 @@
 
         <action
             android:id="@+id/action_homepage_to_food"
-            app:destination="@id/food" />
+            app:destination="@id/calorieListFragment" />
         <action
             android:id="@+id/action_homepage_to_workout"
             app:destination="@id/workout" />
@@ -36,13 +36,15 @@
     </fragment>
 
     <fragment
-        android:id="@+id/food"
-        android:name="com.example.fitdroid.Food"
-        android:label="food"
-        tools:layout="@layout/food" >
+        android:id="@+id/calorieListFragment"
+        android:name="com.example.fitdroid.calorielist.CalorieListFragment"
+        android:label="food">
         <action
             android:id="@+id/action_food_to_homepage"
             app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_calorieListFragment_to_calorieItemFragment"
+            app:destination="@id/calorieItemFragment" />
     </fragment>
     <fragment
         android:id="@+id/workout"
@@ -57,7 +59,7 @@
         android:id="@+id/userModel"
         android:name="com.example.fitdroid.userData.UserFragment"
         android:label="users"
-        tools:layout="@layout/users_fragment" >
+        tools:layout="@layout/user_fragment" >
         <action
             android:id="@+id/action_userModel_to_homepage"
             app:destination="@id/homepage" />
@@ -68,5 +70,27 @@
     <fragment
         android:id="@+id/userScaleFragment"
         android:name="com.example.fitdroid.user_scale_data.UserScaleFragment"
-        android:label="UserScaleFragment" />
+        android:label="UserScaleFragment"
+        tools:layout="@layout/user_scale_fragment">
+        <action
+            android:id="@+id/action_userScaleFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calorieItemFragment"
+        android:name="com.example.fitdroid.userData.CalorieItemFragment"
+        android:label="CalorieItemFragment" >
+        <argument
+            android:name="calorieId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.fitdroid.userProfile.UserProfileFragment"
+        android:label="UserProfileFragment"
+        tools:layout="@layout/user_profile_fragment">
+        <action
+            android:id="@+id/action_userProfileFragment_to_homepage"
+            app:destination="@id/homepage" />
+    </fragment>
 </navigation>
