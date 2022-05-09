@@ -54,6 +54,18 @@
         <action
             android:id="@+id/action_workout_to_homepage"
             app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_workout_to_normalweight"
+            app:destination="@id/normalweight" />
+        <action
+            android:id="@+id/action_workout_to_homepage2"
+            app:destination="@id/homepage" />
+        <action
+            android:id="@+id/action_workout_to_overweight"
+            app:destination="@id/overweight" />
+        <action
+            android:id="@+id/action_workout_to_underweight"
+            app:destination="@id/underweight" />
     </fragment>
     <fragment
         android:id="@+id/userModel"
@@ -92,5 +104,48 @@
         <action
             android:id="@+id/action_userProfileFragment_to_homepage"
             app:destination="@id/homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalweight"
+        android:name="com.example.fitdroid.schedule.Normalweight"
+        android:label="Normalweight" >
+        <action
+            android:id="@+id/action_normalweight_to_workout"
+            app:destination="@id/workout" />
+        <action
+            android:id="@+id/action_normalweight_to_homepage"
+            app:destination="@id/homepage" />
+        <argument
+            android:name="bmi"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/overweight"
+        android:name="com.example.fitdroid.schedule.Overweight"
+        android:label="Overweight" >
+        <action
+            android:id="@+id/action_overweight_to_workout"
+            app:destination="@id/workout" />
+        <action
+            android:id="@+id/action_overweight_to_homepage"
+            app:destination="@id/homepage" />
+        <argument
+            android:name="bmi"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/underweight"
+        android:name="com.example.fitdroid.schedule.Underweight"
+        android:label="underweight"
+        tools:layout="@layout/underweight" >
+        <action
+            android:id="@+id/action_underweight_to_workout"
+            app:destination="@id/workout" />
+        <action
+            android:id="@+id/action_underweight_to_homepage"
+            app:destination="@id/homepage" />
+        <argument
+            android:name="bmi"
+            app:argType="string" />
     </fragment>
 </navigation>
