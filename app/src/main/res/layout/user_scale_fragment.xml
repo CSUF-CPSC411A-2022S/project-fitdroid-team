@@ -90,7 +90,7 @@
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/saveButtton"
+            android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -101,7 +101,7 @@
             android:textSize="18sp"
             android:onClick="@{() -> userScaleViewModel.insert()}"/>
         <Button
-            android:id="@+id/SumbitButtton"
+            android:id="@+id/SumbitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

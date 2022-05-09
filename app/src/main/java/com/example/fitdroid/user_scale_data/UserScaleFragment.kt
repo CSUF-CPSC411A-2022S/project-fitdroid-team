@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.example.fitdroid.R
 import com.example.fitdroid.database.UserDatabase
 import com.example.fitdroid.databinding.UserScaleFragmentBinding
@@ -34,9 +35,9 @@ class UserScaleFragment : Fragment() {
         binding.lifecycleOwner = this
 
 
-//        binding.homeButton.setOnClickListener{ view: View ->
-//            view.findNavController().navigate(R.id.action_userModel_to_homepage)
-//        }
+        binding.SumbitButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_userScaleFragment_to_userProfileFragment)
+        }
         return binding.root
     }
 }
