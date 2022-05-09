@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Personal Profile"
-            android:textSize="16sp"
+            android:textSize="30sp"
             android:gravity="center"
             app:layout_constraintVertical_bias="0.147" />
 
@@ -45,38 +45,30 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/editTextTextPersonName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="61dp"
                     android:hint="Name"
-                    android:text="@={userprofileViewModel.user.name}"
                     android:inputType="textPersonName"
-                    android:textSize="16sp" />
+                    android:text="@={userprofileViewModel.user.name}"
+                    android:textSize="20sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/email"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="61dp"
                     android:hint="Email"
-                    android:text="@={userprofileViewModel.user.email}"
                     android:inputType="textEmailAddress"
-                    android:textSize="16sp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/age"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Age"
-                    android:text="age"
-                    android:inputType="text|numberDecimal"
-                    android:textSize="16sp" />
+                    android:text="@={userprofileViewModel.user.email}"
+                    android:textSize="20sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/address"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="61dp"
                     android:hint="Address"
-                    android:text="@={userprofileViewModel.user.address}"
                     android:inputType="text"
-                    android:textSize="16sp" />
+                    android:text="@={userprofileViewModel.user.address}"
+                    android:textSize="20sp" />
+
                 <Button
                     android:id="@+id/homeButton"
                     android:layout_width="match_parent"

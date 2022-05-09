@@ -26,8 +26,8 @@ class UserProfileFragment: Fragment() {
         val application = requireNotNull(this.activity).application
 
         val dataSource = UserDatabase.getInstance(application).userDao
-
-        val viewModelFactory = UserProfileViewModelFactory(dataSource, application)
+        val dataSource2 = UserDatabase.getInstance(application).scaleDao
+        val viewModelFactory = UserProfileViewModelFactory(dataSource, dataSource2, application)
 
         val userProfileViewModel =
             ViewModelProvider(this, viewModelFactory).get(UserProfileViewModel::class.java)
