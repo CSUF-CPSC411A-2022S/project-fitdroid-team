@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.fitdroid.R
 import com.example.fitdroid.database.CalorieDatabase
@@ -44,6 +45,10 @@ class CalorieListFragment : Fragment() {
         binding.calorieViewModel = calorieViewModel
         // Assign the lifecycle owner to the activity so it manages the data accordingly.
         binding.lifecycleOwner = this
+
+        binding.homeButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_food_to_homepage)
+        }
 
         // Provide a lambda function that is called when the RecyclerView item is selected.
         var calorieAdapter = CalorieListAdapter(CalorieListener {
