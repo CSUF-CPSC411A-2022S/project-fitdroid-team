@@ -20,9 +20,11 @@ class Overweight : Fragment() {
         val binding = OverweightBinding.inflate(layoutInflater)
         val args = OverweightArgs.fromBundle(requireArguments())
         binding.BmiText.text ="Your BMI is ${args.bmi}. You are Overweight.\n" +
-                "This is the recommend schedule for you"
+                "PLease click the button below for your recommended weekly workout schedule"
 
-
+        binding.Schedule.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_overweight_to_overschedule)
+        }
         binding.Home.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_overweight_to_homepage)
         }

@@ -8,20 +8,18 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.fitdroid.R
 import com.example.fitdroid.databinding.NormalscheduleBinding
-import com.example.fitdroid.databinding.UnderscheduleBinding
-import com.example.fitdroid.databinding.UnderweightBinding
-import com.example.fitdroid.databinding.WorkoutBinding
+import com.example.fitdroid.databinding.NormalweightBinding
+import com.example.fitdroid.databinding.OverscheduleBinding
 
-
-class Underweight : Fragment() {
+class Overschedule : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = UnderscheduleBinding.inflate(layoutInflater)
+        val binding = OverscheduleBinding.inflate(layoutInflater)
 
         binding.Back.setOnClickListener{ view: View ->
-            view.findNavController().navigate(R.id.action_underweight_to_homepage)
+            view.findNavController().navigate(R.id.action_overschedule_to_workout)
         }
         return binding.root
     }
