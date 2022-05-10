@@ -23,7 +23,7 @@ class Homepage : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = HomepageBinding.inflate(layoutInflater)
-        binding.tvTimer.text = "${(timerDuration/1000).toString()}"
+        binding.tvTimer.text = "00:${(timerDuration/1000).toString()}"
         binding.btnStart.setOnClickListener{
             startTimer(pauseOffset)
         }
@@ -56,7 +56,7 @@ class Homepage : Fragment() {
             override fun onTick(millisUntilFinished: Long){
                 pauseOffset = timerDuration - millisUntilFinished
                 binding.tvTimer.text =
-                    (millisUntilFinished / 1000).toString()
+                    "00:${(millisUntilFinished / 1000).toString()}"
             }
 
             override fun onFinish() {
@@ -72,7 +72,7 @@ class Homepage : Fragment() {
     private fun resetTimer(){
         if(countDownTimer != null){
             countDownTimer!!.cancel()
-            binding.tvTimer.text = "${(timerDuration/1000).toString()}"
+            binding.tvTimer.text = "00:${(timerDuration/1000).toString()}"
             countDownTimer = null
             pauseOffset = 0
         }
