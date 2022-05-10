@@ -13,6 +13,7 @@ class UserViewModel(
     var email = MutableLiveData("")
     var age = MutableLiveData("")
     var address = MutableLiveData("")
+    var weight = MutableLiveData("")
 
     val UserList = database.getAllUser()
 

@@ -13,8 +13,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-class WeightGoal(private val weight: Float) {
-    fun displayWeight() {
-        println(weight)
-    }
-}

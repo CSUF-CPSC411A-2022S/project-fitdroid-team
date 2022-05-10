@@ -6,9 +6,9 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 
-// TODO: Create User data access object (DAO)
+// User data access object (DAO)
 @Dao
-interface UserDao{
+interface               UserDao{
     @Insert
     suspend fun insert(user: User)
 
