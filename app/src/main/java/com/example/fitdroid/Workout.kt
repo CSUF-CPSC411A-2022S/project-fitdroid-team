@@ -35,6 +35,15 @@ class Workout : Fragment() {
                 view.findNavController().navigate(WorkoutDirections.actionWorkoutToOverweight(BMI.toString()))
             }
         }
+        binding.Under.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_workout_to_underschedule)
+        }
+        binding.Overbutton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_workout_to_overschedule)
+        }
+        binding.Normal.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_workout_to_normalschedule)
+        }
 
         binding.homeButton.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_workout_to_homepage)
