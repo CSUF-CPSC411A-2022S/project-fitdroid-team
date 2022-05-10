@@ -33,7 +33,6 @@ class Goals : Fragment() {
             val linevalues = ArrayList<Entry>()
 
 
-
             if(goalEndDate > 0) {
                 for (i in 1..goalEndDate) {
                     linevalues.add(Entry(i.toFloat(), 250f - i.toFloat()*3))
@@ -66,8 +65,10 @@ class Goals : Fragment() {
         }
 
         binding.goalDateButton.setOnClickListener{ view: View ->
-            var goalEndDate : Int = binding.goalDateText.text.toString().toInt()
-            setLineChartData(goalEndDate)
+            if (!binding.goalDateText.text.toString().equals("")) {
+                var goalEndDate: Int = binding.goalDateText.text.toString().toInt()
+                setLineChartData(goalEndDate)
+            }
         }
 
         setLineChartData(0)
