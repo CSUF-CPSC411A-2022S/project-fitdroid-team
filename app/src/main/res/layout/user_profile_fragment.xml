@@ -69,6 +69,32 @@
                     android:text="@={userprofileViewModel.user.address}"
                     android:textSize="20sp" />
 
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:hint="Height"
+                    android:inputType="text"
+                    android:text="@={userprofileViewModel.scale.tall}"
+                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:hint="Weight"
+                    android:inputType="text"
+                    android:text="@={userprofileViewModel.scale.weight}"
+                    android:textSize="20sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:hint="Goal Weight"
+                    android:inputType="text"
+                    android:text="@={userprofileViewModel.scale.goal}"
+                    android:textSize="20sp" />
+
                 <Button
                     android:id="@+id/homeButton"
                     android:layout_width="match_parent"

@@ -8,7 +8,7 @@ import androidx.room.Update
 
 // User data access object (DAO)
 @Dao
-interface               UserDao{
+interface UserDao{
     @Insert
     suspend fun insert(user: User)
 

@@ -29,12 +29,12 @@ data class User_Scale(
     var ScaleId: Long = 0L,
 
     @ColumnInfo()
-    var tall: Float = 0F,
+    var tall: String = "",
 
     @ColumnInfo()
-    var weight: Float = 0F,
+    var weight: String = "",
 
     @ColumnInfo()
-    var goal: Float = 0F,
+    var goal: String = "",
 
     )
