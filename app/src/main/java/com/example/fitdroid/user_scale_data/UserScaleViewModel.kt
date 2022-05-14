@@ -1,6 +1,7 @@
 package com.example.fitdroid.user_scale_data
 
 import android.app.Application
+import android.icu.number.Scale
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -30,9 +31,9 @@ class UserScaleViewModel(
     fun insert(){
         viewModelScope.launch {
             var scale = User_Scale()
-            scale.tall = tall.value.toString().toFloat()
-            scale.weight = weight.value.toString().toFloat()
-            scale.goal = goal.value.toString().toFloat()
+            scale.tall = tall.value.toString()
+            scale.weight = weight.value.toString()
+            scale.goal = goal.value.toString()
 
             database.insert(scale)
         }

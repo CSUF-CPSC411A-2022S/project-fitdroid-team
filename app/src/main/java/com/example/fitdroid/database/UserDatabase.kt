@@ -5,7 +5,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 // User database
-@Database(entities = [User::class, User_Scale::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, User_Scale::class], version = 2, exportSchema = false)
 abstract class UserDatabase: RoomDatabase(){
     abstract val userDao: UserDao
     abstract val scaleDao: ScaleDao

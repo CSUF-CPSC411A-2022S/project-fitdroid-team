@@ -2,6 +2,7 @@ package com.example.fitdroid.userProfile;
 
 
 import android.app.Application
+import android.icu.number.Scale
 import androidx.databinding.BindingAdapter
 import com.example.fitdroid.database.User
 import com.example.fitdroid.database.UserDao

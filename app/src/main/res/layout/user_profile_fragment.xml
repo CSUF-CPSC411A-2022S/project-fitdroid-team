@@ -48,7 +48,7 @@
                     android:layout_height="61dp"
                     android:hint="Name"
                     android:inputType="textPersonName"
-                    android:text="@={userprofileViewModel.user.name}"
+                    android:text='@{String.format("Name: %s", userprofileViewModel.user.name)}'
                     android:textSize="20sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -57,7 +57,7 @@
                     android:layout_height="61dp"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:text="@={userprofileViewModel.user.email}"
+                    android:text='@{String.format("Email: %s", userprofileViewModel.user.email)}'
                     android:textSize="20sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -66,7 +66,33 @@
                     android:layout_height="61dp"
                     android:hint="Address"
                     android:inputType="text"
-                    android:text="@={userprofileViewModel.user.address}"
+                    android:text='@{String.format("Address: %s", userprofileViewModel.user.address)}'
+                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:hint="Height"
+                    android:inputType="text"
+                    android:text='@{String.format("Height: %s cm", userprofileViewModel.scale.tall)}'
+                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:hint="Weight"
+                    android:inputType="text"
+                    android:text='@{String.format("Weight: %s lbs", userprofileViewModel.scale.weight)}'
+                    android:textSize="20sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:hint="Goal Weight"
+                    android:inputType="text"
+                    android:text='@{String.format("Goal Weight: %s lbs", userprofileViewModel.scale.goal)}'
                     android:textSize="20sp" />
 
                 <Button
