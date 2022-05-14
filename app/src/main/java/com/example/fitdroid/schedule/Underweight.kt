@@ -18,10 +18,19 @@ class Underweight : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = UnderscheduleBinding.inflate(layoutInflater)
+        val binding = UnderweightBinding.inflate(layoutInflater)
+        val args = NormalweightArgs.fromBundle(requireArguments())
+        binding.BmiText.text ="Your BMI is ${args.bmi}. You are underweight.\n" +
+                "Please click the button below for the recommend weekly workout schedule: "
 
-        binding.Back.setOnClickListener{ view: View ->
+        binding.Schedule.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_underweight_to_underschedule)
+        }
+        binding.Home.setOnClickListener{ view: View ->
             view.findNavController().navigate(R.id.action_underweight_to_homepage)
+        }
+        binding.Back.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_underweight_to_workout)
         }
         return binding.root
     }
